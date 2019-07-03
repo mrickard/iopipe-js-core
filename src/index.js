@@ -161,7 +161,7 @@ class IOpipeWrapperClass {
           .then(value => value)
           .catch(err => {
             this.sendReport(err, () => this.originalCallback(err));
-            return err;
+            throw err;
           });
       }
       return result;
